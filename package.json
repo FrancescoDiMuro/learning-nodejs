@@ -1,0 +1,22 @@
+{
+  "name": "learning-nodejs",
+  "version": "1.0.0",
+  "description": "My NodeJS learning journey project.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FrancescoDiMuro/learning-nodejs.git"
+  },
+  "author": "Francesco Di Muro",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FrancescoDiMuro/learning-nodejs/issues"
+  },
+  "homepage": "https://github.com/FrancescoDiMuro/learning-nodejs#readme",
+  "dependencies": {
+    "serve": "^14.2.4"
+  }
+}
