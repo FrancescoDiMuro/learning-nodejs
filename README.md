@@ -84,3 +84,18 @@ To make easier using multiple times the same commands without typing them everyt
     "commandName": "command to run and parameters"
 }
 ```
+
+In our case, we can create a script in this way
+```json
+"scripts": {
+    "static": "serve -p 5050 static"
+}
+```
+and launch it with the command (in the terminal)
+```cmd
+npm run-script static
+```
+or (shorter version)
+```cmd
+npm run static
+```
