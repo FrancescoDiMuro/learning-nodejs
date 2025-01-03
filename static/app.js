@@ -1,26 +1,39 @@
+// This is the entry point (URL and port) for our mock API
+const API = 'http://localhost:3000/';
+
+// This is the mock data
 const mockData = [
     { id: 'A1', name: 'Vacuum Cleaner', rrp: '99.99', info: 'The most powerful vacuum in the world.' },
     { id: 'A2', name: 'Leaf Blower', rrp: '303.33', info: 'This product will blow your socks off.' },
     { id: 'B1', name: 'Chocolate Bar', rrp: '22.40', info: 'Deliciously overpriced chocolate.' }
-]
+];
 
-const populateProducts = () => {
-    const products = document.querySelector('#products')
-    products.innerHTML = ''
-    for (const product of mockData) {
-        const item = document.createElement('product-item')
+const populateProducts = async () => {
+    
+    const products = document.querySelector('#products');
+    products.innerHTML = '';
+    
+    // Here we are doing a request
+    const response = await fetch(API);
+    
+    // Here we are taking the data from the "server" in JSON format
+    const data = await response.json();
+
+    // Here we use the response data in JSON format to populate the HTML
+    for (const product of data) {
+        const item = document.createElement('product-item');
         for (const key of ['name', 'rrp', 'info']) {
-            const span = document.createElement('span')
-            span.slot = key
-            span.textContent = product[key]
-            item.appendChild(span)
+            const span = document.createElement('span');
+            span.slot = key;
+            span.textContent = product[key];
+            item.appendChild(span);
         }
-        products.appendChild(item)
+        products.appendChild(item);
     }
 }
 
 document.querySelector('#fetch').addEventListener('click', async () => {
-    await populateProducts()
+    await populateProducts();
 })
 
 
