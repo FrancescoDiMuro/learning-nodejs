@@ -23,3 +23,17 @@ To verify that Node has been installed correctly, run the command
 ```cmd
 node --version
 ```
+
+### Lesson 2
+`.nvmrc` files are used to specify which version of Node has to be used when running the developed application 
+with NodeJs and with the installed package manager.<br>
+The .nvmrc must be present in the root folder of the project.<br>
+To create a .nvmrc file, just use a text editor and type in the version of NodeJS to be used in the project (e.g. *v22.12.0*).
+
+Once the .nvrmc has been created, use the command
+```cmd
+fnm use --version-file-strategy local
+```
+
+
+
