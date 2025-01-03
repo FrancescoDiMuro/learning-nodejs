@@ -20,7 +20,6 @@ To install the **L**ong-**T**erm **S**upport version of NodeJS, use the command
 ```cmd
 fnm install --lts
 ```
-
 To verify that Node has been installed correctly, run the command
 ```cmd
 node --version
@@ -45,7 +44,6 @@ To create a NodeJS project, run the command (in the project folder)
 ```cmd
 npm init
 ```
-
 The `package.json` file is the core for every NodeJS project;<br>
 in contains the dependencies, the scripts and the project configurations.
 
@@ -56,12 +54,33 @@ Before running this command, and a `.gitignore` file to your project, with the c
 ```text
 node_modules
 ```
-
 and the run the  command
 ```cmd
 npm install serve
 ```
+to install the *serve* package.<br>
+Once the command finishes its execution, use the command
+```cmd
+mkdir static
+```
+to create a folder named *static*.
 
-to install the *serve* package.
+Once the folder has been created, create two more files inside it, respectively named `index.html` and `app.js`, and then run the server with the command
+```cmd
+npx serve -p 5050 static
+```
+where:<br>
+- `npx` is the command from `npm` to run an arbitrary command *from* a package
+- `serve` is the package we run the command from (serve is a command itself)
+- `-p` is the port number the server awaits for requests on
+- `static` is the name of the folder from where to take the files to be served
 
+This command will start the file server and serve the contents of the `static` folder.
 
+#### Creating NPM Shell Commands
+To make easier using multiple times the same commands without typing them everytime, we can create custom commands in the `package.json` file with the syntax
+```json
+"scripts": {
+    "commandName": "command to run and parameters"
+}
+```
