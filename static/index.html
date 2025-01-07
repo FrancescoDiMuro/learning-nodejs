@@ -1,12 +1,16 @@
 <html>
   <head>
-    <title>Learning NodeJS</title>
+    <title>My App</title>
     <script type="module" src="app.js"></script>
     <style>body { background: #fad8d8 }</style>
   </head>
   <body>
     <nav>
-      <button id="fetch">Fetch Products</button>
+      <select id="category">
+        <option value="" hidden>Select Category</option>
+        <option value="electronics">Electronics</option>
+        <option value="confectionery">Confectionery</option>
+      </select>
     </nav>
     <hr>
     <div id="products"></div>
@@ -19,12 +23,11 @@
        <details>
         <summary>
           <strong>
-            <slot name="name"></slot>
-          </strong> - <em><slot name="rrp"></slot></em>
+           <slot name="name"></slot></strong> - 
+           <em><slot name="rrp"></slot></em>
         </summary>
         <p><slot name="info"></slot></p>
       </details>
     </template>
   </body>
 </html>
-
