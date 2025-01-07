@@ -99,3 +99,20 @@ or (shorter version)
 ```cmd
 npm run static
 ```
+Creating an `.mjs` file, we moved the server logic from the `app.js` to this specific file (*server.mjs*), dividing the mock server from the mock client.
+
+To run the server, use the command
+```cmd
+node server.mjs
+```
+
+### Using Fastify
+After installing all the dependencies with the command
+```cmd
+npm install fastify fastify-cli
+```
+create a folder for the Fastify app scaffolding with the command
+```cmd
+npx fastify generate . --esm
+```
+*npx* executes a command in the *fastify* package (*generate*), in the current folder (*.*), with the **E**CMA **S**cript **M**odule flag (*--esm*).
