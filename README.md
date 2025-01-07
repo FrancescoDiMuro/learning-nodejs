@@ -116,3 +116,5 @@ create a folder for the Fastify app scaffolding with the command
 npx fastify generate . --esm
 ```
 *npx* executes a command in the *fastify* package (*generate*), in the current folder (*.*), with the **E**CMA **S**cript **M**odule flag (*--esm*).
+
+`npm install` installs the packages which have been added to the *package.json* file.
