@@ -118,3 +118,9 @@ npx fastify generate . --esm
 *npx* executes a command in the *fastify* package (*generate*), in the current folder (*.*), with the **E**CMA **S**cript **M**odule flag (*--esm*).
 
 `npm install` installs the packages which have been added to the *package.json* file.
+
+To divide routes in different files, we can create different folders as the route names, and create an index.mjs file inside of each of them.
+
+In Fastify, this division is called "route plugin".
+
+
